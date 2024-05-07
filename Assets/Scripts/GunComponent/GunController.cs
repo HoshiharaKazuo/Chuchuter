@@ -16,19 +16,25 @@ public class GunController : MonoBehaviour
     private BulletDetail _currentEquipedBullet;
     private PlayerInput _playerInput;
 
+    private bool _loadingGun = false;
 
+
+    private void Awake()
+    {
+        EventManager.OnChangeGunEvent += LoadGunComponents;
+
+    }
     private void Start()
     {
         _playerInput = FindObjectOfType<PlayerInput>();
-        _playerInput.OnShootAction += PlayerInput_OnShootAction;
-
-        LoadGunComponents();
-
+        _playerInput.OnShootAction += PlayerInput_OnShootAction;        
+        LoadGunComponents(_currentEquipedGun);
     }
 
     private void OnDestroy()
     {
         _playerInput.OnShootAction -= PlayerInput_OnShootAction;
+        EventManager.OnChangeGunEvent -= LoadGunComponents;
     }
 
     void Update()
@@ -36,18 +42,21 @@ public class GunController : MonoBehaviour
         Aim();
     }
 
-    private void LoadGunComponents()
+    private void LoadGunComponents(GunDetail gunDetails)
     {
+        _loadingGun = true;
+        _currentEquipedGun = gunDetails;
         _spriteRenderer.sprite = _currentEquipedGun.gunSprite;
         _shootVelocity = _currentEquipedGun.gunShootVelocity;
         _currentEquipedBullet = _currentEquipedGun.defaultGunBullet;
         _currentBulletShootSound = _currentEquipedGun.gunSound;
+        _loadingGun = false;
     }
 
     private void PlayerInput_OnShootAction(object sender, System.EventArgs e)
     {
+        if (_loadingGun) return;
         _audioSource.PlayOneShot(_currentBulletShootSound);
-
         Bullet bullet = (Bullet)PoolManager.Instance.ReuseComponent(_bulletPrefab, _spawnBulletTransform.position, transform.rotation); 
         bullet.LoadDefaultConfigBulletConfig(_currentEquipedBullet, _shootVelocity);
         bullet.gameObject.SetActive(true);
