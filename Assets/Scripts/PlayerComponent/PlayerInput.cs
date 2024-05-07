@@ -17,6 +17,10 @@ public class PlayerInput : MonoBehaviour
         playerInputActions.Player.Shoot.performed += Shoot_performed;
     }
 
+    private void OnDestroy()
+    {
+        playerInputActions.Player.Shoot.performed -= Shoot_performed;
+    }
     private void Shoot_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         OnShootAction?.Invoke(this, EventArgs.Empty);

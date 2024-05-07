@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolArray:
-  - poolSize: 5
-    prefab: {fileID: 2732988704942473775, guid: d56ccfac045752146902dc710f85c28c, type: 3}
+  - poolSize: 10
+    prefab: {fileID: 8413481014897235800, guid: d56ccfac045752146902dc710f85c28c, type: 3}
     componentType: EnemyController
-  - poolSize: 5
+  - poolSize: 20
     prefab: {fileID: 6435120126869589294, guid: c1fd4fcbfb6b74f40a10ba9ebc41e671, type: 3}
     componentType: Bullet
