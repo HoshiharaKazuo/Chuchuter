@@ -40,7 +40,9 @@ public class GunController : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             _audioSource.PlayOneShot(_currentBulletShootSound);
-            Instantiate(_bulletPrefab, _spawnBulletTransform.position, transform.rotation);
+            GameObject bullet = Instantiate(_bulletPrefab, _spawnBulletTransform.position, transform.rotation);
+            Bullet bulletConfig = bullet.GetComponent<Bullet>();
+            bulletConfig.LoadDefaultConfigBulletConfig(_currentEquipedBullet, _shootVelocity);
         }
     }
 

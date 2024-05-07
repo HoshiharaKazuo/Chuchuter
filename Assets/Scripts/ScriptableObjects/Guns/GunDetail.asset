@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: GunDetail
   m_EditorClassIdentifier: 
   gunSprite: {fileID: 21300000, guid: 6fc10d9a90bca934ba483fb8dea2eb84, type: 3}
-  gunShootVelocity: 1
+  gunShootVelocity: 10
   gunSound: {fileID: 8300000, guid: 7c31dedc126e18749851125a0d25fc6a, type: 3}
   defaultGunBullet: {fileID: 11400000, guid: d7b5f540e3d0ab94992d774b2b65f4b2, type: 2}
