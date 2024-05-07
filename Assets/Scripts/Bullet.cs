@@ -19,6 +19,17 @@ public class Bullet : MonoBehaviour
     {
         //LoadDefaultConfigBulletConfig();
     }
+    private void OnEnable()
+    {
+        _canMove = true;
+        _circleCollider.enabled = true;
+    }
+
+    private void OnDisable()
+    {
+        _canMove = false;
+        _circleCollider.enabled = false;
+    }
 
     // Update is called once per frame
     void Update()
@@ -33,14 +44,11 @@ public class Bullet : MonoBehaviour
         _spriteRenderer.sprite = bulletDetail.bulletSprite;
         _bulletEffect = bulletDetail.bulletCollisionEffect;
         _speed = gunSpeed;
-        _canMove = true;
-        _circleCollider.enabled = true;
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        _canMove = false;
         Instantiate(_bulletEffect, transform.position, transform.rotation);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

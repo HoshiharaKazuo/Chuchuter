@@ -47,9 +47,10 @@ public class GunController : MonoBehaviour
     private void PlayerInput_OnShootAction(object sender, System.EventArgs e)
     {
         _audioSource.PlayOneShot(_currentBulletShootSound);
-        GameObject bullet = Instantiate(_bulletPrefab, _spawnBulletTransform.position, transform.rotation);
-        Bullet bulletConfig = bullet.GetComponent<Bullet>();
-        bulletConfig.LoadDefaultConfigBulletConfig(_currentEquipedBullet, _shootVelocity);
+
+        Bullet bullet = (Bullet)PoolManager.Instance.ReuseComponent(_bulletPrefab, _spawnBulletTransform.position, transform.rotation); 
+        bullet.LoadDefaultConfigBulletConfig(_currentEquipedBullet, _shootVelocity);
+        bullet.gameObject.SetActive(true);
 
     }
 

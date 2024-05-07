@@ -1120,10 +1120,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7023679442904409929, guid: 686008bef81a9ac43bf0f4a740f55e8f, type: 3}
-      propertyPath: poolArray.Array.data[0].prefab
-      value: 
-      objectReference: {fileID: 8413481014897235800, guid: d56ccfac045752146902dc710f85c28c, type: 3}
     - target: {fileID: 8345538992997956018, guid: 686008bef81a9ac43bf0f4a740f55e8f, type: 3}
       propertyPath: m_Name
       value: PoolManager
