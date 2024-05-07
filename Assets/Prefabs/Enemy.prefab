@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4376809125156363800}
   - component: {fileID: 2558809660414164843}
+  - component: {fileID: 7102127507254907202}
   - component: {fileID: 7519327891102532909}
   - component: {fileID: 887413316380931827}
   - component: {fileID: 1951003589263378127}
@@ -63,6 +64,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7102127507254907202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8413481014897235800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7e045b1c32c1b4db8c9c0dd26b5936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxLife: 1
 --- !u!114 &7519327891102532909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +91,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 2
   _scoreToAdd: 10
+  _damageToDealOnPlayer: 1
+  _lifeController: {fileID: 7102127507254907202}
   _animator: {fileID: 881100236221210627}
   _capsuleCollider2D: {fileID: 1951003589263378127}
   _audioSource: {fileID: 887413316380931827}

@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 3324358254178537748}
   - component: {fileID: 5438186895360049325}
   - component: {fileID: 3677100674258863403}
+  - component: {fileID: 8941100915338131275}
   - component: {fileID: 1580948361167364147}
   m_Layer: 0
   m_Name: Player
@@ -136,6 +137,7 @@ MonoBehaviour:
   _moveSpeed: 5
   _anim: {fileID: 5399242915917412172}
   _playerInput: {fileID: 3677100674258863403}
+  _lifeController: {fileID: 8941100915338131275}
 --- !u!114 &3677100674258863403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +150,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38db12aaac12594687b49d00587633f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8941100915338131275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790342013354148851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7e045b1c32c1b4db8c9c0dd26b5936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxLife: 1
 --- !u!70 &1580948361167364147
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
