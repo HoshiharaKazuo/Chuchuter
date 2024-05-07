@@ -9,6 +9,16 @@ public class GunController : MonoBehaviour
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _spawnBulletTransform;
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField]
+    private GunDetail _currentEquipedGun;
+    private AudioClip _currentBulletShootSound;
+    private float _shootVelocity;
+    private BulletDetail _currentEquipedBullet;
+
+    private void Start()
+    {
+        LoadGunComponents();
+    }
 
     void Update()
     {
@@ -16,11 +26,20 @@ public class GunController : MonoBehaviour
         Shoot();
     }
     
+
+    private void LoadGunComponents()
+    {
+        _spriteRenderer.sprite = _currentEquipedGun.gunSprite;
+        _shootVelocity = _currentEquipedGun.gunShootVelocity;
+        _currentEquipedBullet = _currentEquipedGun.defaultGunBullet;
+        _currentBulletShootSound = _currentEquipedGun.gunSound;
+    }
+
     private void Shoot()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            _audioSource.Play();
+            _audioSource.PlayOneShot(_currentBulletShootSound);
             Instantiate(_bulletPrefab, _spawnBulletTransform.position, transform.rotation);
         }
     }
