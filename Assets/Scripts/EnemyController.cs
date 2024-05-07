@@ -8,7 +8,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private int _scoreToAdd;
     [SerializeField] private Animator _animator;
-    [SerializeField] private CircleCollider2D _circleCollider;
+    [SerializeField] private CapsuleCollider2D _capsuleCollider2D;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _deathClip;
 
@@ -18,7 +18,7 @@ public class EnemyController : MonoBehaviour
     private void OnEnable()
     {
         isAlive = true;
-        _circleCollider.enabled = true;
+        _capsuleCollider2D.enabled = true;
     }
     void Start()
     {
@@ -41,7 +41,7 @@ public class EnemyController : MonoBehaviour
             _animator.SetTrigger("Dead");
             _audioSource.PlayOneShot(_deathClip);
             isAlive = false;
-            _circleCollider.enabled = false;
+            _capsuleCollider2D.enabled = false;
             StartCoroutine(DestroyEnemy());
         }
     }
