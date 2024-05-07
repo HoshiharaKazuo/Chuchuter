@@ -6,16 +6,15 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
     [SerializeField] private Animator _anim;
-    private Vector2 moveInput;
+    [SerializeField] private PlayerInput _playerInput;
 
     void Update()
     {
-        moveInput.x = Input.GetAxis("Horizontal");
-        moveInput.y = Input.GetAxis("Vertical");
+        Vector2 inputVector = _playerInput.GetMovementVector();
         
-        transform.Translate(moveInput * Time.deltaTime * _moveSpeed);
+        transform.Translate(inputVector * Time.deltaTime * _moveSpeed);
         
-        _anim.SetBool("IsMoving", moveInput != Vector2.zero);
+        _anim.SetBool("IsMoving", inputVector != Vector2.zero);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
