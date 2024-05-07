@@ -9,8 +9,8 @@ public class EventManager : MonoBehaviour
     public  delegate void OnPlayerSocore(int scoreToAdd);
     public static event OnPlayerSocore OnCountScore;
 
-    public delegate void OnChangeBullet(BulletDetail bullet);
-    public static event OnChangeBullet OnChangeBulletEvent;
+    public delegate void OnChangeGun(GunDetail bullet);
+    public static event OnChangeGun OnChangeGunEvent;
 
     public static event Action OnPlayerDeath;
 
@@ -24,8 +24,8 @@ public class EventManager : MonoBehaviour
         OnPlayerDeath?.Invoke();
     }
 
-    public static void OnChangeBulletTrigger(BulletDetail bulletDetail)
+    public static void OnChangeGunTrigger(GunDetail gunDetail)
     {
-        OnChangeBulletEvent?.Invoke(bulletDetail);
+        OnChangeGunEvent?.Invoke(gunDetail);
     }
 }
