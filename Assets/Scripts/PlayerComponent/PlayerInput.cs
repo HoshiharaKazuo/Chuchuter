@@ -5,12 +5,21 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    public event EventHandler OnShootAction;
+    
     private PlayerInputActions playerInputActions;
 
     private void Awake()
     {
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
+
+        playerInputActions.Player.Shoot.performed += Shoot_performed;
+    }
+
+    private void Shoot_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        OnShootAction?.Invoke(this, EventArgs.Empty);
     }
 
     public Vector2 GetMovementVector()

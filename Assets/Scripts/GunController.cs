@@ -10,19 +10,22 @@ public class GunController : MonoBehaviour
     [SerializeField] private Transform _spawnBulletTransform;
     [SerializeField] private AudioSource _audioSource;
 
+    private void Start()
+    {
+        PlayerInput playerInput = FindObjectOfType<PlayerInput>();
+
+        playerInput.OnShootAction += PlayerInput_OnShootAction;
+    }
+
     void Update()
     {
         Aim();
-        Shoot();
     }
     
-    private void Shoot()
+    private void PlayerInput_OnShootAction(object sender, System.EventArgs e)
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            _audioSource.Play();
-            Instantiate(_bulletPrefab, _spawnBulletTransform.position, transform.rotation);
-        }
+        _audioSource.Play();
+        Instantiate(_bulletPrefab, _spawnBulletTransform.position, transform.rotation);
     }
 
     private void Aim()
