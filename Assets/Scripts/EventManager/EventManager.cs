@@ -5,14 +5,15 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    
-    public static event Action OnCountScore;
+
+    public  delegate void OnPlayerSocre(int scoreToAdd);
+    public static event OnPlayerSocre OnCountScore;
 
     public static event Action OnPlayerDeath;
 
-    public static void OnCountScoreTrigger()
+    public static void OnCountScoreTrigger(int scoreToAdd)
     {
-        OnCountScore?.Invoke();
+        OnCountScore?.Invoke(scoreToAdd);
     }
 
     public static void OnPlayerDeathTrigger() { 

@@ -111,10 +111,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
+  _scoreToAdd: 10
   _animator: {fileID: 5926041955421323462}
+  _circleCollider: {fileID: 4323714703883142920}
   _audioSource: {fileID: 971003778584229419}
   _deathClip: {fileID: 8300000, guid: 25dc7b47ea287ff49978b75036f1b4bd, type: 3}
-  _circleCollider: {fileID: 4323714703883142920}
 --- !u!82 &971003778584229419
 AudioSource:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float _speed;
+    [SerializeField] private int _scoreToAdd;
     [SerializeField] private Animator _animator;
     [SerializeField] private CircleCollider2D _circleCollider;
     [SerializeField] private AudioSource _audioSource;
@@ -36,7 +37,7 @@ public class EnemyController : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Bullet"))
         {
-            EventManager.OnCountScoreTrigger();
+            EventManager.OnCountScoreTrigger(_scoreToAdd);
             _animator.SetTrigger("Dead");
             _audioSource.PlayOneShot(_deathClip);
             isAlive = false;
