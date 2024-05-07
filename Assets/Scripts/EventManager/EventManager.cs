@@ -6,8 +6,8 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
 
-    public  delegate void OnPlayerSocre(int scoreToAdd);
-    public static event OnPlayerSocre OnCountScore;
+    public  delegate void OnPlayerSocore(int scoreToAdd);
+    public static event OnPlayerSocore OnCountScore;
 
     public static event Action OnPlayerDeath;
 
