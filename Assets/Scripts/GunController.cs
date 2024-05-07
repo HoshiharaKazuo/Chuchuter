@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GunController : MonoBehaviour
 {
@@ -9,23 +10,47 @@ public class GunController : MonoBehaviour
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _spawnBulletTransform;
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private GunDetail _currentEquipedGun;
+    private AudioClip _currentBulletShootSound;
+    private float _shootVelocity;
+    private BulletDetail _currentEquipedBullet;
+    private PlayerInput _playerInput;
+
 
     private void Start()
     {
-        PlayerInput playerInput = FindObjectOfType<PlayerInput>();
+        _playerInput = FindObjectOfType<PlayerInput>();
+        _playerInput.OnShootAction += PlayerInput_OnShootAction;
 
-        playerInput.OnShootAction += PlayerInput_OnShootAction;
+        LoadGunComponents();
+
+    }
+
+    private void OnDestroy()
+    {
+        _playerInput.OnShootAction -= PlayerInput_OnShootAction;
     }
 
     void Update()
     {
         Aim();
     }
-    
+
+    private void LoadGunComponents()
+    {
+        _spriteRenderer.sprite = _currentEquipedGun.gunSprite;
+        _shootVelocity = _currentEquipedGun.gunShootVelocity;
+        _currentEquipedBullet = _currentEquipedGun.defaultGunBullet;
+        _currentBulletShootSound = _currentEquipedGun.gunSound;
+    }
+
     private void PlayerInput_OnShootAction(object sender, System.EventArgs e)
     {
-        _audioSource.Play();
-        Instantiate(_bulletPrefab, _spawnBulletTransform.position, transform.rotation);
+        _audioSource.PlayOneShot(_currentBulletShootSound);
+        GameObject bullet = Instantiate(_bulletPrefab, _spawnBulletTransform.position, transform.rotation);
+        Bullet bulletConfig = bullet.GetComponent<Bullet>();
+        bulletConfig.LoadDefaultConfigBulletConfig(_currentEquipedBullet, _shootVelocity);
+
     }
 
     private void Aim()

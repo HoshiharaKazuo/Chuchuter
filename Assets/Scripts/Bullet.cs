@@ -34,6 +34,7 @@ public class Bullet : MonoBehaviour
         _bulletEffect = bulletDetail.bulletCollisionEffect;
         _speed = gunSpeed;
         _canMove = true;
+        _circleCollider.enabled = true;
     }
     
     private void OnTriggerEnter2D(Collider2D other)
