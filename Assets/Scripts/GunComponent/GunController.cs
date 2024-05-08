@@ -13,6 +13,9 @@ public class GunController : MonoBehaviour
     [SerializeField] private GunDetail _currentEquipedGun;
     private AudioClip _currentBulletShootSound;
     private float _shootVelocity;
+    private float _shakeIntensity;
+    private float _shakeFrequency;
+    private float _shakeDuration;
     private BulletDetail _currentEquipedBullet;
     private PlayerInput _playerInput;
 
@@ -50,12 +53,16 @@ public class GunController : MonoBehaviour
         _shootVelocity = _currentEquipedGun.gunShootVelocity;
         _currentEquipedBullet = _currentEquipedGun.defaultGunBullet;
         _currentBulletShootSound = _currentEquipedGun.gunSound;
+        _shakeDuration = _currentEquipedGun.shakeDuration;
+        _shakeFrequency = _currentEquipedGun.shakeFrequency;
+        _shakeIntensity = _currentEquipedGun.shakeIntensity;
         _loadingGun = false;
     }
 
     private void PlayerInput_OnShootAction(object sender, System.EventArgs e)
     {
         if (_loadingGun) return;
+        EventManager.OnShakeCameraTrigger(_shakeIntensity, _shakeFrequency, _shakeDuration);
         _audioSource.PlayOneShot(_currentBulletShootSound);
         Bullet bullet = (Bullet)PoolManager.Instance.ReuseComponent(_bulletPrefab, _spawnBulletTransform.position, transform.rotation); 
         bullet.LoadDefaultConfigBulletConfig(_currentEquipedBullet, _shootVelocity);

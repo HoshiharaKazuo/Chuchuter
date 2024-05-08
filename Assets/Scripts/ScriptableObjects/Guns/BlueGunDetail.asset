@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunSprite: {fileID: 21300000, guid: abaacda350c902a42aa32a3da0a1dbc4, type: 3}
   gunShootVelocity: 20
+  shakeIntensity: 3
+  shakeFrequency: 3
+  shakeDuration: 0.3
   gunSound: {fileID: 8300000, guid: 7c31dedc126e18749851125a0d25fc6a, type: 3}
   defaultGunBullet: {fileID: 11400000, guid: ef0c04dd4e416054b9e34d9f4863f18d, type: 2}
