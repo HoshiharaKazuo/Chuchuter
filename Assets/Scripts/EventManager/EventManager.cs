@@ -17,6 +17,9 @@ public class EventManager : MonoBehaviour
     public delegate void OnShakeCamera(float intensity, float frequency, float duration);
     public static event OnShakeCamera OnShakeCameraEvent;
 
+    public delegate void OnPauseGame(bool pause);
+    public static event OnPauseGame OnPauseGameEvent;
+
     public static void OnCountScoreTrigger(int scoreToAdd)
     {
         OnCountScore?.Invoke(scoreToAdd);
@@ -35,5 +38,10 @@ public class EventManager : MonoBehaviour
     public static void OnShakeCameraTrigger(float intensity, float frequency, float duration)
     {
         OnShakeCameraEvent?.Invoke(intensity, frequency, duration);
+    }
+
+    public static void OnPauseGameTrigger(bool pause)
+    {
+        OnPauseGameEvent?.Invoke(pause);
     }
 }

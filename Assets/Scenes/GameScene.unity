@@ -647,6 +647,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _virtualCamera: {fileID: 769582146}
+--- !u!1 &800363833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8568387767104917198, guid: 4df66f21412b71245a1175c9999927b5, type: 3}
+  m_PrefabInstance: {fileID: 3285344051432170841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &800645380
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +736,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &840438843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3931276594264387179, guid: 4df66f21412b71245a1175c9999927b5, type: 3}
+  m_PrefabInstance: {fileID: 3285344051432170841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &923635239
 GameObject:
   m_ObjectHideFlags: 3
@@ -14373,9 +14383,17 @@ PrefabInstance:
       value: GameController
       objectReference: {fileID: 0}
     - target: {fileID: 3606291928205992842, guid: 3868b87675e4c1d42b89a43851972e6a, type: 3}
+      propertyPath: _pauseButton
+      value: 
+      objectReference: {fileID: 800363833}
+    - target: {fileID: 3606291928205992842, guid: 3868b87675e4c1d42b89a43851972e6a, type: 3}
       propertyPath: _gameOverScreen
       value: 
       objectReference: {fileID: 450244471}
+    - target: {fileID: 3606291928205992842, guid: 3868b87675e4c1d42b89a43851972e6a, type: 3}
+      propertyPath: _gamePausedScreen
+      value: 
+      objectReference: {fileID: 840438843}
     - target: {fileID: 6516530316279517119, guid: 3868b87675e4c1d42b89a43851972e6a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.7253982

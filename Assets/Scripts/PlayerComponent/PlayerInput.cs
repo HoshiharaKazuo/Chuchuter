@@ -9,20 +9,24 @@ public class PlayerInput : MonoBehaviour
     
     private PlayerInputActions playerInputActions;
 
+    private bool _gamePaused;
+
     private void Awake()
     {
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
-
         playerInputActions.Player.Shoot.performed += Shoot_performed;
+        EventManager.OnPauseGameEvent += OnGamePause;
     }
 
     private void OnDestroy()
     {
         playerInputActions.Player.Shoot.performed -= Shoot_performed;
+        EventManager.OnPauseGameEvent -= OnGamePause;
     }
     private void Shoot_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
+        if (_gamePaused) return;
         OnShootAction?.Invoke(this, EventArgs.Empty);
     }
 
@@ -33,5 +37,10 @@ public class PlayerInput : MonoBehaviour
         inputVector = inputVector.normalized;
 
         return inputVector;
+    }
+
+    private void OnGamePause(bool pause)
+    {
+        _gamePaused = pause;
     }
 }
