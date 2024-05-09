@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 923192047621631818}
   - component: {fileID: 8004585257045752125}
   m_Layer: 0
-  m_Name: GunController
+  m_Name: prefab_GunController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

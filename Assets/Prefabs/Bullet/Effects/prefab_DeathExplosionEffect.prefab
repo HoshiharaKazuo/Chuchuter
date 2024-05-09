@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1198010528637116004}
   - component: {fileID: 8107508747662646199}
   m_Layer: 0
-  m_Name: DeathExplosionEffect
+  m_Name: prefab_DeathExplosionEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

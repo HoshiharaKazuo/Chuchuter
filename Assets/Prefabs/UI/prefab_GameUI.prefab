@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 1420528553319380007}
   - component: {fileID: 5179445795882312256}
   m_Layer: 5
-  m_Name: GameUI
+  m_Name: prefab_GameUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
