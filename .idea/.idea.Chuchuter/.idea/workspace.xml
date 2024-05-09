@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88a869c2-a438-4070-bca2-b37fe4f1d78c" name="Changes" comment="" />
+    <list default="true" id="88a869c2-a438-4070-bca2-b37fe4f1d78c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Chuchuter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chuchuter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/EnemyStatic.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/EnemyStatic.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/Idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/Settings/Description Area.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/Settings/Description Area.png.meta" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +18,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/MenuUI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -29,7 +38,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/MenuScene&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/CreditsScene&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -94,7 +103,8 @@
       <workItem from="1715092759824" duration="203000" />
       <workItem from="1715095808022" duration="815000" />
       <workItem from="1715262602107" duration="48000" />
-      <workItem from="1715262702381" duration="645000" />
+      <workItem from="1715262702381" duration="646000" />
+      <workItem from="1715266723379" duration="1976000" />
     </task>
     <servers />
   </component>
