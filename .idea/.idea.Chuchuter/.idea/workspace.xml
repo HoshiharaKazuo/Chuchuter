@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88a869c2-a438-4070-bca2-b37fe4f1d78c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Chuchuter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chuchuter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="88a869c2-a438-4070-bca2-b37fe4f1d78c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +94,7 @@
       <workItem from="1715092759824" duration="203000" />
       <workItem from="1715095808022" duration="815000" />
       <workItem from="1715262602107" duration="48000" />
-      <workItem from="1715262702381" duration="530000" />
+      <workItem from="1715262702381" duration="645000" />
     </task>
     <servers />
   </component>
