@@ -15,13 +15,13 @@ public class ScoreController : MonoBehaviour
 
     private void Start()
     {
-        EventManager.OnCountScore += OnPlayerScore;
+        EventManager.OnCountScoreEvent += OnPlayerScore;
         EventManager.OnPlayerDeath += OnPlayerDeath;
     }
 
     private void OnDestroy()
     {
-        EventManager.OnCountScore -= OnPlayerScore;
+        EventManager.OnCountScoreEvent -= OnPlayerScore;
         EventManager.OnPlayerDeath -= OnPlayerDeath;
     }
 

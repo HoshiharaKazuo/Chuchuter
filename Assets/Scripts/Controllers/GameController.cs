@@ -39,15 +39,27 @@ public class GameController : MonoBehaviour
     {
         if (pause)
         {
-            _gamePausedScreen.SetActive(true);
-            _pauseButton.SetActive(false);
-            Time.timeScale = 0;
+            StartCoroutine(EnablePauseMenu());
         }
         else
         {
-            _gamePausedScreen.SetActive(false);
-            _pauseButton.SetActive(true);
             Time.timeScale = 1;
+            StartCoroutine(DisablePauseMenu());
         }
+    }
+
+    private IEnumerator DisablePauseMenu()
+    {
+        yield return new WaitForSeconds(1f);
+        _gamePausedScreen.SetActive(false);
+        _pauseButton.SetActive(true);
+    }
+
+    private IEnumerator EnablePauseMenu()
+    {
+        yield return new WaitForSeconds(1f);
+        _gamePausedScreen.SetActive(true);
+        _pauseButton.SetActive(false);
+        Time.timeScale = 0;
     }
 }
