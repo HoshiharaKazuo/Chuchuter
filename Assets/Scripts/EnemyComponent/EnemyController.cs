@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private CapsuleCollider2D _capsuleCollider2D;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _deathClip;
+    [SerializeField] private GameObject _deathSFX;
 
     private GameObject player;
     private bool isAlive = true;
@@ -55,16 +56,13 @@ public class EnemyController : MonoBehaviour
     {
         EventManager.OnCountScoreTrigger(_scoreToAdd);
         EventManager.OnShakeCameraTrigger(2, 2, 0.3f);
-        _animator.SetTrigger("Dead");
+        ParticleController deathParticleController = (ParticleController) PoolManager.Instance.ReuseComponent(_deathSFX, transform.position, Quaternion.identity);
+        deathParticleController.gameObject.SetActive(true);
+        gameObject.SetActive(false);
+        deathParticleController.PlayParticle();
         _audioSource.PlayOneShot(_deathClip);
         isAlive = false;
         _capsuleCollider2D.enabled = false;
-        StartCoroutine(DestroyEnemy());
     }
 
-    private IEnumerator DestroyEnemy()
-    {
-        yield return new WaitForSeconds(1f);
-        gameObject.SetActive(false);
-    }
 }

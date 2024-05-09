@@ -56,8 +56,10 @@ public class Bullet : MonoBehaviour
             LifeController lifeController = other.gameObject.GetComponent<LifeController>();
             lifeController.GetDamage(_bulletDamage);
         }
-        Instantiate(_bulletEffect, transform.position, transform.rotation);
-        gameObject.SetActive(false);
+        else{
+            Instantiate(_bulletEffect, transform.position, transform.rotation);
+        }
         
+        gameObject.SetActive(false);
     }
 }

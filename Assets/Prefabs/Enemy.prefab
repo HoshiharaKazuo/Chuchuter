@@ -97,6 +97,7 @@ MonoBehaviour:
   _capsuleCollider2D: {fileID: 1951003589263378127}
   _audioSource: {fileID: 887413316380931827}
   _deathClip: {fileID: 8300000, guid: 25dc7b47ea287ff49978b75036f1b4bd, type: 3}
+  _deathSFX: {fileID: 3156985630568927215, guid: d9e29ccceb963a34aa7bc0b8d872f47e, type: 3}
 --- !u!82 &887413316380931827
 AudioSource:
   m_ObjectHideFlags: 0
