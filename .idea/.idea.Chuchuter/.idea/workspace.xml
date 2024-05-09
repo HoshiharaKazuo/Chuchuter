@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="88a869c2-a438-4070-bca2-b37fe4f1d78c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chuchuter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chuchuter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/EnemyStatic.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/EnemyStatic.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Enemy/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Enemy/Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/Settings/Description Area.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/Settings/Description Area.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +100,7 @@
       <workItem from="1715095808022" duration="815000" />
       <workItem from="1715262602107" duration="48000" />
       <workItem from="1715262702381" duration="646000" />
-      <workItem from="1715266723379" duration="1976000" />
+      <workItem from="1715266723379" duration="2663000" />
     </task>
     <servers />
   </component>
