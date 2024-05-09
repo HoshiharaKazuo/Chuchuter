@@ -51,3 +51,6 @@ MonoBehaviour:
   - poolSize: 20
     prefab: {fileID: 6435120126869589294, guid: c1fd4fcbfb6b74f40a10ba9ebc41e671, type: 3}
     componentType: Bullet
+  - poolSize: 10
+    prefab: {fileID: 3156985630568927215, guid: d9e29ccceb963a34aa7bc0b8d872f47e, type: 3}
+    componentType: ParticleController
