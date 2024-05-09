@@ -14,6 +14,9 @@ public class EventManager : MonoBehaviour
 
     public static event Action OnPlayerDeath;
 
+    public delegate void OnShakeCamera(float intensity, float frequency, float duration);
+    public static event OnShakeCamera OnShakeCameraEvent;
+
     public static void OnCountScoreTrigger(int scoreToAdd)
     {
         OnCountScore?.Invoke(scoreToAdd);
@@ -27,5 +30,10 @@ public class EventManager : MonoBehaviour
     public static void OnChangeGunTrigger(GunDetail gunDetail)
     {
         OnChangeGunEvent?.Invoke(gunDetail);
+    }
+
+    public static void OnShakeCameraTrigger(float intensity, float frequency, float duration)
+    {
+        OnShakeCameraEvent?.Invoke(intensity, frequency, duration);
     }
 }
