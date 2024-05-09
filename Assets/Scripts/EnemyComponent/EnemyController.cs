@@ -54,6 +54,7 @@ public class EnemyController : MonoBehaviour
     private void PerformDeathSequence()
     {
         EventManager.OnCountScoreTrigger(_scoreToAdd);
+        EventManager.OnShakeCameraTrigger(2, 2, 0.3f);
         _animator.SetTrigger("Dead");
         _audioSource.PlayOneShot(_deathClip);
         isAlive = false;

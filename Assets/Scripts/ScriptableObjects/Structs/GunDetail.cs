@@ -9,9 +9,6 @@ public class GunDetail : ScriptableObject
 {
     public Sprite gunSprite;
     public float gunShootVelocity;
-    public float shakeIntensity;
-    public float shakeFrequency;
-    public float shakeDuration;
     public AudioClip gunSound;
     public BulletDetail defaultGunBullet;
 }
