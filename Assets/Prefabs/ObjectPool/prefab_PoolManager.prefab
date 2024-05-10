@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2909566309499539952}
   - component: {fileID: 7023679442904409929}
   m_Layer: 0
-  m_Name: PoolManager
+  m_Name: prefab_PoolManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

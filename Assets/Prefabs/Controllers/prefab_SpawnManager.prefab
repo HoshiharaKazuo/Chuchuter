@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2712190026069782088}
   - component: {fileID: 7672735419264054902}
   m_Layer: 0
-  m_Name: SpawnManager
+  m_Name: prefab_SpawnManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

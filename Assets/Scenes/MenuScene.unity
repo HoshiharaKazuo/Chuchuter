@@ -1447,7 +1447,7 @@ GameObject:
   - component: {fileID: 716259356}
   - component: {fileID: 716259355}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2653,7 +2653,7 @@ GameObject:
   - component: {fileID: 1596782127}
   - component: {fileID: 1596782126}
   m_Layer: 0
-  m_Name: BGM
+  m_Name: BGMController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2865,7 +2865,7 @@ GameObject:
   - component: {fileID: 1653687106}
   - component: {fileID: 1653687107}
   m_Layer: 0
-  m_Name: ChangeScene
+  m_Name: ChangeSceneController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4078,7 +4078,7 @@ GameObject:
   - component: {fileID: 2020910708}
   - component: {fileID: 2020910707}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: BackgroundGrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14750,9 +14750,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 472984252}
   - {fileID: 2020910708}
-  - {fileID: 769582147}
   - {fileID: 716259358}
-  - {fileID: 1653687106}
   - {fileID: 1596782127}
+  - {fileID: 1653687106}
+  - {fileID: 769582147}
+  - {fileID: 472984252}
