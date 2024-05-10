@@ -7,7 +7,7 @@ public class EventManager : MonoBehaviour
 {
 
     public  delegate void OnPlayerSocore(int scoreToAdd);
-    public static event OnPlayerSocore OnCountScore;
+    public static event OnPlayerSocore OnCountScoreEvent;
 
     public delegate void OnChangeGun(GunDetail bullet);
     public static event OnChangeGun OnChangeGunEvent;
@@ -17,9 +17,15 @@ public class EventManager : MonoBehaviour
     public delegate void OnShakeCamera(float intensity, float frequency, float duration);
     public static event OnShakeCamera OnShakeCameraEvent;
 
+    public delegate void OnPauseGame(bool pause);
+    public static event OnPauseGame OnPauseGameEvent;
+
+    public delegate void OnMenuButtonPressed();
+    public static event OnMenuButtonPressed OnMenuButtonPressedEvent;
+
     public static void OnCountScoreTrigger(int scoreToAdd)
     {
-        OnCountScore?.Invoke(scoreToAdd);
+        OnCountScoreEvent?.Invoke(scoreToAdd);
     }
 
     public static void OnPlayerDeathTrigger() { 
@@ -35,5 +41,15 @@ public class EventManager : MonoBehaviour
     public static void OnShakeCameraTrigger(float intensity, float frequency, float duration)
     {
         OnShakeCameraEvent?.Invoke(intensity, frequency, duration);
+    }
+
+    public static void OnPauseGameTrigger(bool pause)
+    {
+        OnPauseGameEvent?.Invoke(pause);
+    }
+
+    public static void OnMenuButtonPressedTrigger()
+    {
+        OnMenuButtonPressedEvent?.Invoke();
     }
 }

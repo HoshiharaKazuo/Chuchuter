@@ -54,15 +54,21 @@ public class EnemyController : MonoBehaviour
 
     private void PerformDeathSequence()
     {
+        _audioSource.PlayOneShot(_deathClip);
         EventManager.OnCountScoreTrigger(_scoreToAdd);
         EventManager.OnShakeCameraTrigger(2, 2, 0.3f);
         ParticleController deathParticleController = (ParticleController) PoolManager.Instance.ReuseComponent(_deathSFX, transform.position, Quaternion.identity);
         deathParticleController.gameObject.SetActive(true);
-        gameObject.SetActive(false);
         deathParticleController.PlayParticle();
-        _audioSource.PlayOneShot(_deathClip);
         isAlive = false;
         _capsuleCollider2D.enabled = false;
+        StartCoroutine(DestroyEnemy());
+    }
+
+    private IEnumerator DestroyEnemy()
+    {
+        yield return new WaitForSeconds(0.1f);
+        gameObject.SetActive(false);
     }
 
 }
